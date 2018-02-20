@@ -12,12 +12,13 @@ import { QuotesPage } from '../pages/quotes/quotes';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
 import { QuotesService } from '../services/quotes';
+import { SettingsService } from '../services/settings';
 //creo una pagina en la consola con ionic generate page [nombrepagina]
 //vengo a declarations y la instancio, luego a entrycomponents y digo que pertenece a mi app
 @NgModule({
   declarations: [
     MyApp,
-    FavoritesPage, 
+    FavoritesPage,
     LibraryPage,
     QuotePage,
     QuotesPage,
@@ -41,8 +42,8 @@ import { QuotesService } from '../services/quotes';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuotesService
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    QuotesService, SettingsService
   ]
 })
-export class AppModule {}
+export class AppModule { }

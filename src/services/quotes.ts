@@ -14,7 +14,12 @@ export class QuotesService {
         })
         this.favoriteQuotes.splice(position, 1);
     }
-    getFavoriteQuotes(){
+    getFavoriteQuotes() {
         return this.favoriteQuotes.slice();
+    }
+    isQuoteFavorite(quote: Quote) {
+        return this.favoriteQuotes.find((quoteEl: Quote) => {
+            return quoteEl.id == quote.id;
+        })
     }
 }
